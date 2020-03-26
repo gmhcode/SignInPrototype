@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FC63BE3D9FA624A4427BF07 /* Pods_signInPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4A9AB391DBB4C576449B38 /* Pods_signInPrototype.framework */; };
 		902E7D36242C1CE400AD5956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E7D35242C1CE400AD5956 /* AppDelegate.swift */; };
 		902E7D38242C1CE400AD5956 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E7D37242C1CE400AD5956 /* SceneDelegate.swift */; };
 		902E7D3A242C1CE400AD5956 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E7D39242C1CE400AD5956 /* ViewController.swift */; };
@@ -23,11 +22,11 @@
 		902E7D5E242C2B8F00AD5956 /* GoogleSignIn.framework in Resources */ = {isa = PBXBuildFile; fileRef = 902E7D5B242C2B8E00AD5956 /* GoogleSignIn.framework */; };
 		902E7D60242C300500AD5956 /* GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E7D5F242C300500AD5956 /* GoogleSignIn.swift */; };
 		902E7D65242D262100AD5956 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E7D64242D262100AD5956 /* KeychainItem.swift */; };
+		F377B8ADD760816BCFD7CF33 /* Pods_signInPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEACED73F08E6A0D271962E4 /* Pods_signInPrototype.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E4A9AB391DBB4C576449B38 /* Pods_signInPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signInPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8309F17D375E3CA077253ED9 /* Pods-signInPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signInPrototype.release.xcconfig"; path = "Target Support Files/Pods-signInPrototype/Pods-signInPrototype.release.xcconfig"; sourceTree = "<group>"; };
+		6735748E71BF56B67C6ADC0A /* Pods-signInPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signInPrototype.debug.xcconfig"; path = "Target Support Files/Pods-signInPrototype/Pods-signInPrototype.debug.xcconfig"; sourceTree = "<group>"; };
 		902E7D32242C1CE400AD5956 /* signInPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signInPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		902E7D35242C1CE400AD5956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		902E7D37242C1CE400AD5956 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +45,8 @@
 		902E7D5F242C300500AD5956 /* GoogleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignIn.swift; sourceTree = "<group>"; };
 		902E7D63242D215600AD5956 /* signInPrototype.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = signInPrototype.entitlements; sourceTree = "<group>"; };
 		902E7D64242D262100AD5956 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
-		D51426BB31254CCEA2787024 /* Pods-signInPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signInPrototype.debug.xcconfig"; path = "Target Support Files/Pods-signInPrototype/Pods-signInPrototype.debug.xcconfig"; sourceTree = "<group>"; };
+		F797459E65CA98D04DE45BD1 /* Pods-signInPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signInPrototype.release.xcconfig"; path = "Target Support Files/Pods-signInPrototype/Pods-signInPrototype.release.xcconfig"; sourceTree = "<group>"; };
+		FEACED73F08E6A0D271962E4 /* Pods_signInPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signInPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				902E7D56242C273F00AD5956 /* AuthenticationServices.framework in Frameworks */,
 				902E7D54242C273300AD5956 /* SafariServices.framework in Frameworks */,
 				902E7D52242C272B00AD5956 /* LocalAuthentication.framework in Frameworks */,
-				2FC63BE3D9FA624A4427BF07 /* Pods_signInPrototype.framework in Frameworks */,
+				F377B8ADD760816BCFD7CF33 /* Pods_signInPrototype.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +68,8 @@
 		2538CCE9F3979AB9CC2D2F07 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D51426BB31254CCEA2787024 /* Pods-signInPrototype.debug.xcconfig */,
-				8309F17D375E3CA077253ED9 /* Pods-signInPrototype.release.xcconfig */,
+				6735748E71BF56B67C6ADC0A /* Pods-signInPrototype.debug.xcconfig */,
+				F797459E65CA98D04DE45BD1 /* Pods-signInPrototype.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -119,7 +119,7 @@
 				902E7D55242C273F00AD5956 /* AuthenticationServices.framework */,
 				902E7D53242C273300AD5956 /* SafariServices.framework */,
 				902E7D51242C272B00AD5956 /* LocalAuthentication.framework */,
-				7E4A9AB391DBB4C576449B38 /* Pods_signInPrototype.framework */,
+				FEACED73F08E6A0D271962E4 /* Pods_signInPrototype.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,12 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 902E7D46242C1CE800AD5956 /* Build configuration list for PBXNativeTarget "signInPrototype" */;
 			buildPhases = (
-				42A7C816CBA58970132B535D /* [CP] Check Pods Manifest.lock */,
+				2A179ABC919DA6404D006D1E /* [CP] Check Pods Manifest.lock */,
 				902E7D2E242C1CE400AD5956 /* Sources */,
 				902E7D2F242C1CE400AD5956 /* Frameworks */,
 				902E7D30242C1CE400AD5956 /* Resources */,
-				DFB7C5B0971020011FD5B131 /* [CP] Embed Pods Frameworks */,
-				44382793C5DCADF34C415E70 /* [CP] Copy Pods Resources */,
+				AF2A969A3B28B1D550A157CE /* [CP] Embed Pods Frameworks */,
+				46772DC030D816553B50FB69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,7 +197,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42A7C816CBA58970132B535D /* [CP] Check Pods Manifest.lock */ = {
+		2A179ABC919DA6404D006D1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,7 +219,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		44382793C5DCADF34C415E70 /* [CP] Copy Pods Resources */ = {
+		46772DC030D816553B50FB69 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,7 +236,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-signInPrototype/Pods-signInPrototype-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFB7C5B0971020011FD5B131 /* [CP] Embed Pods Frameworks */ = {
+		AF2A969A3B28B1D550A157CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,7 +406,7 @@
 		};
 		902E7D47242C1CE800AD5956 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D51426BB31254CCEA2787024 /* Pods-signInPrototype.debug.xcconfig */;
+			baseConfigurationReference = 6735748E71BF56B67C6ADC0A /* Pods-signInPrototype.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = signInPrototype/signInPrototype.entitlements;
@@ -458,7 +458,7 @@
 		};
 		902E7D48242C1CE800AD5956 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8309F17D375E3CA077253ED9 /* Pods-signInPrototype.release.xcconfig */;
+			baseConfigurationReference = F797459E65CA98D04DE45BD1 /* Pods-signInPrototype.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = signInPrototype/signInPrototype.entitlements;

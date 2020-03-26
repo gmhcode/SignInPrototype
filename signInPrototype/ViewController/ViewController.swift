@@ -13,10 +13,12 @@ import AuthenticationServices
 
 class ViewController: UIViewController {
 
+    
+
 
     @IBOutlet weak var signInButton: GIDSignInButton!
     @IBOutlet weak var loginStackView: UIStackView!
-    
+    var user : User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +27,40 @@ class ViewController: UIViewController {
         // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         setupProviderLoginView()
+        loadKeychain()
+        stuff()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        performExistingAccountSetupFlows()
+//        performExistingAccountSetupFlows()
     }
     
-  
     
+    func loadKeychain() {
+        if let receivedData = KeyChain.load(key: "signInPrototypeUserID") {
+            let result = String(data: receivedData, encoding: .utf8) ?? " "
+            print("result: ", result)
+        }
+    }
+    
+    func stuff() {
+        let defaults = UserDefaults.standard
+        
+        if var user = defaults.array(forKey: "User") as? [User] {
+            
+            
+            //   when itemArray is changed vv saves the change
+            defaults.set(user, forKey: "User")
+        }else {
+            print("blah")
+        }
+    }
+    func saveUser(user:User) {
+        let defaults = UserDefaults.standard
+        defaults.set(user, forKey: "User")
+    }
     func performExistingAccountSetupFlows() {
            // Prepare requests for both Apple ID and password providers.
            let requests = [ASAuthorizationAppleIDProvider().createRequest(),
@@ -66,6 +93,11 @@ class ViewController: UIViewController {
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? LoggedInViewController
+        destination?.user = user
+        
+    }
     
 }
 
@@ -81,20 +113,31 @@ extension ViewController : ASAuthorizationControllerDelegate, ASAuthorizationCon
             
             // Create an account in your system.
             let userIdentifier = appleIDCredential.user
-            let fullName = appleIDCredential.fullName
-            let email = appleIDCredential.email
+            let firstName = appleIDCredential.fullName
+           
+            let token = appleIDCredential.identityToken
+           
             
-            // For the purpose of this demo app, store the `userIdentifier` in the keychain.
-            self.saveUserInKeychain(userIdentifier)
             
-            // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
-//            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
+            
+            // For the purpose of this demo a   pp, store the `userIdentifier` in the keychain.
+//            self.saveUserInKeychain(userIdentifier)
+            if let email = appleIDCredential.email {
+                
+                
+                self.user = User(userID: userIdentifier, email: email, firstName: firstName?.givenName, lastName: firstName?.familyName)
+                let idData = user?.uuid.uuidString.data(using: .utf8)
+                KeyChain.save(key: "signInPrototypeUserID", data: idData!)
+                performSegue(withIdentifier: "segue", sender: nil)
+            }
+            // For the purpose of this demo app, show the Apple ID credential information in the 
         
         case let passwordCredential as ASPasswordCredential:
         
             // Sign in using an existing iCloud Keychain credential.
             let username = passwordCredential.user
             let password = passwordCredential.password
+            
             
             // For the purpose of this demo app, show the password credential as an alert.
             DispatchQueue.main.async {

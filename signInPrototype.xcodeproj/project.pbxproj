@@ -22,6 +22,9 @@
 		902E7D5E242C2B8F00AD5956 /* GoogleSignIn.framework in Resources */ = {isa = PBXBuildFile; fileRef = 902E7D5B242C2B8E00AD5956 /* GoogleSignIn.framework */; };
 		902E7D60242C300500AD5956 /* GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E7D5F242C300500AD5956 /* GoogleSignIn.swift */; };
 		902E7D65242D262100AD5956 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E7D64242D262100AD5956 /* KeychainItem.swift */; };
+		9033DB97242D2CE90062E0F2 /* AppleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033DB96242D2CE90062E0F2 /* AppleSignIn.swift */; };
+		9033DB9A242D3AD00062E0F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033DB99242D3AD00062E0F2 /* User.swift */; };
+		9033DB9E242D49120062E0F2 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033DB9D242D49120062E0F2 /* LoggedInViewController.swift */; };
 		F377B8ADD760816BCFD7CF33 /* Pods_signInPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEACED73F08E6A0D271962E4 /* Pods_signInPrototype.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		902E7D5F242C300500AD5956 /* GoogleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignIn.swift; sourceTree = "<group>"; };
 		902E7D63242D215600AD5956 /* signInPrototype.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = signInPrototype.entitlements; sourceTree = "<group>"; };
 		902E7D64242D262100AD5956 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		9033DB96242D2CE90062E0F2 /* AppleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignIn.swift; sourceTree = "<group>"; };
+		9033DB99242D3AD00062E0F2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9033DB9D242D49120062E0F2 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		F797459E65CA98D04DE45BD1 /* Pods-signInPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signInPrototype.release.xcconfig"; path = "Target Support Files/Pods-signInPrototype/Pods-signInPrototype.release.xcconfig"; sourceTree = "<group>"; };
 		FEACED73F08E6A0D271962E4 /* Pods_signInPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signInPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,18 +104,37 @@
 			isa = PBXGroup;
 			children = (
 				902E7D63242D215600AD5956 /* signInPrototype.entitlements */,
-				902E7D35242C1CE400AD5956 /* AppDelegate.swift */,
-				902E7D5F242C300500AD5956 /* GoogleSignIn.swift */,
+				9033DB95242D2BD20062E0F2 /* HelperClasses */,
 				902E7D37242C1CE400AD5956 /* SceneDelegate.swift */,
-				902E7D39242C1CE400AD5956 /* ViewController.swift */,
+				9033DB98242D395E0062E0F2 /* ViewController */,
 				902E7D3B242C1CE400AD5956 /* Main.storyboard */,
 				902E7D3E242C1CE800AD5956 /* Assets.xcassets */,
 				902E7D40242C1CE800AD5956 /* LaunchScreen.storyboard */,
 				902E7D4D242C23EA00AD5956 /* credentials.plist */,
 				902E7D43242C1CE800AD5956 /* Info.plist */,
-				902E7D64242D262100AD5956 /* KeychainItem.swift */,
+				9033DB99242D3AD00062E0F2 /* User.swift */,
 			);
 			path = signInPrototype;
+			sourceTree = "<group>";
+		};
+		9033DB95242D2BD20062E0F2 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				902E7D35242C1CE400AD5956 /* AppDelegate.swift */,
+				902E7D5F242C300500AD5956 /* GoogleSignIn.swift */,
+				902E7D64242D262100AD5956 /* KeychainItem.swift */,
+				9033DB96242D2CE90062E0F2 /* AppleSignIn.swift */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		9033DB98242D395E0062E0F2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				902E7D39242C1CE400AD5956 /* ViewController.swift */,
+				9033DB9D242D49120062E0F2 /* LoggedInViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		E681ECEA0209876FBEA70599 /* Frameworks */ = {
@@ -260,11 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9033DB97242D2CE90062E0F2 /* AppleSignIn.swift in Sources */,
 				902E7D3A242C1CE400AD5956 /* ViewController.swift in Sources */,
 				902E7D36242C1CE400AD5956 /* AppDelegate.swift in Sources */,
 				902E7D65242D262100AD5956 /* KeychainItem.swift in Sources */,
 				902E7D60242C300500AD5956 /* GoogleSignIn.swift in Sources */,
 				902E7D38242C1CE400AD5956 /* SceneDelegate.swift in Sources */,
+				9033DB9A242D3AD00062E0F2 /* User.swift in Sources */,
+				9033DB9E242D49120062E0F2 /* LoggedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

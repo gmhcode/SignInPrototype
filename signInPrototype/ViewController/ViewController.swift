@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             
             
             //   when itemArray is changed vv saves the change
-            defaults.set(user, forKey: "User")
+            self.user = user[0]
         }else {
             print("blah")
         }
@@ -126,8 +126,10 @@ extension ViewController : ASAuthorizationControllerDelegate, ASAuthorizationCon
                 
                 
                 self.user = User(userID: userIdentifier, email: email, firstName: firstName?.givenName, lastName: firstName?.familyName)
-                let idData = user?.uuid.uuidString.data(using: .utf8)
-                KeyChain.save(key: "signInPrototypeUserID", data: idData!)
+                let idData = user?.uuid.uuidString.data(using: .utf8) ?? Data()
+                let emailData = email.data(using: .utf8) ?? Data()
+                KeyChain.save(key: "signInPrototypeUserID", data: idData)
+                KeyChain.save(key: "signInPrototypeEmail", data: emailData)
                 performSegue(withIdentifier: "segue", sender: nil)
             }
             // For the purpose of this demo app, show the Apple ID credential information in the 
